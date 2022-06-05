@@ -23,14 +23,12 @@ void ChangeFirstAndLast(int[,] matrix)
 {
     int start = 0;
     int finish = matrix.GetLength(0)-1;
-    int temporary1 = 0;
-    int temporary2 = 0;
+    int temporary = 0;
     for(int j=0; j<matrix.GetLength(1); j++)
         {
-            temporary1 = matrix[finish,j];
-            temporary2 = matrix[start,j];
-            matrix[start,j]=temporary1;
-            matrix[finish,j]=temporary2;
+            temporary = matrix[start,j];
+            matrix[start,j] = matrix[finish,j];
+            matrix[finish,j] = temporary;
         }
 }
 
