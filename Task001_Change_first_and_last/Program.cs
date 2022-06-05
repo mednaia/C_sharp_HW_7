@@ -23,20 +23,15 @@ void ChangeFirstAndLast(int[,] matrix)
 {
     int start = 0;
     int finish = matrix.GetLength(0)-1;
-    int index = 0;
-    int[] temporary1 = new int[matrix.GetLength(1)];
-    int[] temporary2 = new int[matrix.GetLength(1)];
-    while(index<matrix.GetLength(1))
-    {
-        for(int j=0; j<matrix.GetLength(1); j++)
-            {
-                temporary1[index] = matrix[finish,j];
-                temporary2[index]=matrix[start,j];
-                matrix[start,j]=temporary1[index];
-                matrix[finish,j]=temporary2[index];
-                index++;
-            }
-    }
+    int temporary1 = 0;
+    int temporary2 = 0;
+    for(int j=0; j<matrix.GetLength(1); j++)
+        {
+            temporary1 = matrix[finish,j];
+            temporary2 = matrix[start,j];
+            matrix[start,j]=temporary1;
+            matrix[finish,j]=temporary2;
+        }
 }
 
 Console.Write("Enter amount of matrix rows: ");
