@@ -39,8 +39,6 @@ void SearchLessRow(int[,] matrix)
     }
     Console.WriteLine($"The least value in row with index {minI} with sum {minSum}.");
 }
-//Не очень довольна этим кодом. Для первой строки всегда выдает значение суммы 0, 
-//хотя определяет строку с минимальной суммой верно.
 
 Console.Write("Enter amount of matrix rows: ");
 int rows = int.Parse(Console.ReadLine() ?? "0");
