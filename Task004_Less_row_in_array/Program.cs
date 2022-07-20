@@ -24,7 +24,7 @@ void SearchLessRow(int[,] matrix)
 {
     int minI = 0;
     int minSum = 0;
-    int tmpSum1 = 0;
+    int tmpSum1 = 10000000;
     for(int i = 0; i < matrix.GetLength(0); i++) 
     {
         int tmpSum2 = 0;
@@ -37,7 +37,7 @@ void SearchLessRow(int[,] matrix)
         }
         tmpSum1 = tmpSum2;
     }
-    Console.WriteLine($"The least value in row with index {minI}.");
+    Console.WriteLine($"The least value in row with index {minI} with sum {minSum}.");
 }
 //Не очень довольна этим кодом. Для первой строки всегда выдает значение суммы 0, 
 //хотя определяет строку с минимальной суммой верно.
